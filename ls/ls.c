@@ -54,7 +54,16 @@ void listSingleItem(*char filename)
 void listAllFiles()
 {
   //need to open the current section here or pass it in
-  
+  char fileName[11];
+  int position = 0x00;
+  int FCN;
+  int type;
+  int size;
+
+  do
+    {
+      
+    }while(fileName[0] != 0x00 | fileName[0] != 0xF6);
 }
 
 

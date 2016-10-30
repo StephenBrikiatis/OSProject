@@ -18,6 +18,9 @@
 #define EXIT_SUCCESS 0
 #define EXIT_FAILURE 1
 
+extern char* openSuperVars();
+extern void closeSuperVars();
+
 void runLoop();
 char* readInput();
 char** parseInput(char* line);
@@ -27,6 +30,9 @@ int executeCommand(char** cmd);
 
 int main(int argc, char* argv[])
 {
+  char* mainChange;
+  mainChange = openSuperVars();
+  
 	runLoop();
 
 	return 0;
