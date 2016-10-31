@@ -1,13 +1,46 @@
 #include <stdio.h>
 
-void listDirectory(*char directoryName)
+void listDirectory(*char directoryName, *char currentDir, int location)
 {
 
 }
 
-void listFile(*char filename)
+void listFile(*char filename, *char currentDir, int location)
 {
+  char name[11];
+  int nameLength = 0;
+  char holder;
+  int fileType = 0;
+  int fileSize = 0;
+  int flc = 0;
+  int i;
+  
+  for(i = 0; i < 8; i++)
+    {
+      holder = currentDir[location+i];
+      if(holder != ' ')
+	{
+	  name[i] = holder;
+	  nameLength++;
+	}
+    }
+  name[nameLenght] = '.';
 
+  for(i = 0; i < 3; i++)
+    {
+      holder = currentDir[0x08+location+i];
+      if(holder != ' ')
+	{
+	  nameLength++;
+	  name[nameLength] = holder;
+	}
+    }
+
+  fileType = currentDir[location+0x0B];
+
+  //file size require the concataination of 4 variables
+
+  
 }
 
 void listSingleItem(*char filename)

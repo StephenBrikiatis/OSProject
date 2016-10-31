@@ -15,7 +15,7 @@ int main()
   struct stat st;
   int error;
   
-  fp = shm_open("/test.txt", O_RDWR, 0777);
+  fp = shm_open("/test.txt", O_RDWR | O_CREAT, 0777);
   if(fp == -1)
     {
       fprintf(stderr, "Open failed:%s\n", strerror(errno));
