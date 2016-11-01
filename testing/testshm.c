@@ -20,7 +20,7 @@ void main(int argc, char *argv[])
       exit(-1);
     }
 
-  if((shm_ID = shmget(SHMKEY, SHMSIZE, IPC_CREAT | 0666)) < 0)
+  if((shm_ID = shmget(SHMKEY, SHMSIZE, IPC_CREAT | 0666)) < 0) //Creates or opens a pointer
     {
       perror("Error creating SHM segment.");
       exit(-1);
@@ -30,7 +30,7 @@ void main(int argc, char *argv[])
       printf("\nSHM segment has been created. \n");
     }
 
-  if((pointer = shmat(shm_ID, NULL, 0)) == NULL)
+  if((pointer = shmat(shm_ID, NULL, 0)) == NULL) //puts the stuff in memory
     {
       perror("Error including SHM address space.");
       exit(0);

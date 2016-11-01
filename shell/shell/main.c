@@ -18,8 +18,7 @@
 #define EXIT_SUCCESS 0
 #define EXIT_FAILURE 1
 
-extern char* openSuperVars();
-extern void closeSuperVars();
+extern void startSuperVars();
 
 void runLoop();
 char* readInput();
@@ -30,9 +29,8 @@ int executeCommand(char** cmd);
 
 int main(int argc, char* argv[])
 {
-  char* mainChange;
-  mainChange = openSuperVars();
-  
+    startSuperVars();
+    
 	runLoop();
 
 	return 0;
