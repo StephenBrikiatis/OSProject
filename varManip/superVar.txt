@@ -1,0 +1,5 @@
+struct SuperVar{
+	int sector;
+	char floppyName[25];
+	char directoryName[500];
+}
