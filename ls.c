@@ -24,7 +24,7 @@ void listFile(*char filename, *char currentDir, int location)
 	  nameLength++;
 	}
     }
-  name[nameLenght] = '.';
+  name[nameLength] = '.';
 
   for(i = 0; i < 3; i++)
     {
