@@ -1,3 +1,15 @@
+/*Authors: Stephen Brikiatis
+Class:  CSI-385-01
+Assignment: FAT12
+Date Assigned: 08/30/16
+Due Date: 11/2/16
+
+Description: This code is for the print boot sector command which will access the file system
+and print out the sector it booted in.
+
+Certification of Authenticity:
+We certify that this assignment is entirely our own work.
+*/
 #include <stdio.h>
 #include <stdlib.h>
 

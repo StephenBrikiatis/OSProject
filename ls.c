@@ -1,3 +1,15 @@
+/*Authors: Stephen Brikiatis and Kelly Morrissey
+Class:  CSI-385-01
+Assignment: FAT12
+Date Assigned: 08/30/16
+Due Date: 11/2/16
+
+Description: This code holds the control of the ls command in relation to the FAT12.
+
+Certification of Authenticity:
+We certify that this assignment is entirely our own work.
+
+*/
 #include <stdio.h>
 
 void listDirectory(*char directoryName, *char currentDir, int location)
