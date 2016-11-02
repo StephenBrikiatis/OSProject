@@ -71,7 +71,7 @@ int executeCommand(char** cmd)
 	int status = 1;
 
 	x = fork();
-
+	
 	if(x == -1)
 	{
 		perror("fork error\n");
@@ -109,6 +109,12 @@ int executeCommand(char** cmd)
 			}
 		}
 	}
+
+	if((strncmp(cmd[0], "exit", 4) == 0 | strncmp(cmd[0], "logout", 6) == 0))
+	  {
+	    status = 0;
+	  }
+	
 	return status;
 }
 

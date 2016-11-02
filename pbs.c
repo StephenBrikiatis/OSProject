@@ -2,13 +2,15 @@
 #include <stdlib.h>
 
 #include "superVar.h"
+#include "fatSupport.h"
 
 #define BYTES_TO_READ_IN_BOOT 512;
 
-FILE *FILE_SYSTEM;
+FILE *FILE_SYSTEM_ID;
 int BYTES_PER_SECTOR;
 
 extern int read_sector(int sector_number, char* buffer);
+extern SuperVar readSuperVars();
 
 typedef struct{
     int BytesPerSector;
@@ -23,12 +25,10 @@ typedef struct{
     int BootSig;
     int VolumeID;
     char VolumeLabel[12];
-    char *FileSystemType[9];
+    char FileSystemType[9];
     
 } sectorLabels; //Easier to hold the order of the variables this way
 
-extern SuperVar readSuperVars();
-extern int read_sector();
 int main()
 {
     unsigned char *boot;
@@ -41,8 +41,8 @@ int main()
     
     holder = readSuperVars();
     
-    FILE_SYSTEM = fopen(holder.floppyName, "r+");
-    if(FILE_SYSTEM == NULL)
+    FILE_SYSTEM_ID = fopen(holder.floppyName, "r+");
+    if(FILE_SYSTEM_ID == NULL)
     {
         perror("File did not open.");
         exit(-1);
