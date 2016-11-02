@@ -1,0 +1,2 @@
+shellOS: shell.c varManip.c
+	gcc -o shell shell.c varManip.c -I.
