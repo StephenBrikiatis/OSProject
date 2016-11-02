@@ -28,7 +28,7 @@ SuperVar readSuperVars()
 		exit(0);
 	}
 	
-	//&data = pointer;
+	memcpy(&data, pointer, sizeof(pointer));
 	
 	if(shmdt(pointer) < 0)
 	{

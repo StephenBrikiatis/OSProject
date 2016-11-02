@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <fatSupport.h>
 #include "varManip.h"
 
 #define SECTOR_SIZE = 512;
@@ -10,8 +9,7 @@ extern SuperVar readSuperVars();
 int main(int argc, char *argv[]){
   
     unsigned char *currentSector;
-    SuperVar 
-    
+    SuperVar data;
   
   if(argc != 1)
     {
@@ -20,7 +18,7 @@ int main(int argc, char *argv[]){
     }
   else
     {
-      
+      currentSector = data.directoryName; 
 
       printf("%s", currentSector);
     }
