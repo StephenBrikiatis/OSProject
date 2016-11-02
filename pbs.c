@@ -24,8 +24,8 @@ typedef struct{
     int NumberOfHeads;
     int BootSig;
     int VolumeID;
-    char VolumeLabel[12];
-    char FileSystemType[9];
+    char VolumeLabel[11];
+    char FileSystemType[8];
     
 } sectorLabels; //Easier to hold the order of the variables this way
 
@@ -41,7 +41,8 @@ int main()
     
     holder = readSuperVars();
     
-    FILE_SYSTEM_ID = fopen(holder.floppyName, "r+");
+    FILE_SYSTEM_ID = fopen("floppy1", "r+");
+
     if(FILE_SYSTEM_ID == NULL)
     {
         perror("File did not open.");
@@ -120,7 +121,7 @@ int main()
     printf("Sectors per FAT = %d\n", listings.SectorsPerTrack);
     printf("Sectors per track = %d\n", listings.SectorsPerTrack);
     printf("Number of heads = %d\n", listings.NumberOfHeads);
-    printf("Boot signature = 0x%04x\n", listings.BootSig);
+    printf("Boot signature = 0x%02x\n", listings.BootSig);
     printf("Volume ID = 0x%08x\n", listings.VolumeID);
     printf("Volume label = %s\n", listings.VolumeLabel);
     printf("File system type = %s\n", listings.FileSystemType);

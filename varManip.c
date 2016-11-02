@@ -68,9 +68,9 @@ void startSuperVars() //This should only be run with the shell
     
     memcpy(pointer, &data, sizeof(data));
     
-    if(shmdt(pointer) < 0)
+    /*if(shmdt(pointer) < 0)
     {
         perror("Couldn't deallocate SuperVars.");
         exit(0);
-    }
+    }*/
 }
