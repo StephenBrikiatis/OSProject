@@ -1,8 +1,14 @@
-/*
- * main.c
- *
- *      Author: kmorris
- */
+/*Authors: Stephen Brikiatis  and Kelly Morrissey
+Class:  CSI-385-01
+Assignment: FAT12
+Date Assigned: 08/30/16
+Due Date: 11/2/16
+
+Description: This code is the shell that will be used to call the commands in relation to the FAT12.
+
+Certification of Authenticity:
+We certify that this assignment is entirely our own work.
+*/
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdio.h>
